@@ -7,6 +7,10 @@ body {
     height: 100vh;
 }
 
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 footer {
   width: 100%;
 }
@@ -21,6 +25,11 @@ footer {
     align-self: center;
     flex-direction: column;
     justify-content: center;
+}
+
+#contact-form > h1 {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 #contact-form > button {

@@ -156,6 +156,7 @@
 * {
   /* Layout Declarations */
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -217,7 +218,7 @@ a:hover {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 6em;
+  font-size: 5em;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   text-shadow: 0px 3px 0px #587884;
