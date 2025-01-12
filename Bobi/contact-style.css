@@ -15,8 +15,16 @@ footer {
   width: 100%;
 }
 
+#contact-info {
+  background-color: white;
+  padding: 24px;
+  border-radius: 16px;
+  width: 80%;
+}
+
 #contact-form {
-    margin: 200px 0;
+    margin-top: 200px;
+    margin-bottom: 70px;
     width: 80%;
     padding: 48px;
     background-color: white;
