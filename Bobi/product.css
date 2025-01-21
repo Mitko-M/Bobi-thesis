@@ -1,3 +1,42 @@
+#sizes {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.size-checked {
+    background-color: darkorange !important;
+    color: white;
+    border: 1px solid white;
+}
+
+.size {
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#count {
+    display: flex;
+    width: 100px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#count button {
+    width: 30%;
+}
+
+#count * {
+    border: 0;
+}
+
+#count input {
+    width: 40%;
+    text-align: center;
+}
+
 body {
     height: 100%;
     width: 100%;
@@ -37,7 +76,7 @@ body {
     height: 100%;
 }
 
-#product-info {
+#product-info, label {
     color: white;
 }
 
@@ -71,7 +110,6 @@ body {
     }
 
     #actions {
-        flex-direction: column;
         gap: 10px;
     }
 }
