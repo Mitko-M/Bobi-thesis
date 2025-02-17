@@ -30,7 +30,15 @@
 }
 
 #carousel img {
-    height: 500px;
+    height: 400px;
+    width: 700px !important;
+}
+
+#carousel-logo {
+  display: flex;
+  align-items: center;
+  background-color: #FFA500;
+  justify-content: space-evenly;
 }
 
 .catalog-btn {
