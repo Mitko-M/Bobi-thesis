@@ -12,10 +12,10 @@ ul {
     justify-content: center;
     align-items: center;
     height: 100vh;
+	margin-top: 50px;
 }
-
 #about-us h1, p {
-  margin: 25px;
+ 
 }
 
 .site-footer

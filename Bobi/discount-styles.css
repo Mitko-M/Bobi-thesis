@@ -6,6 +6,20 @@
   margin: 100px 0;
 }
 
+.percent2 {
+	float: right;
+	align-items:right;
+	justify-content: right;
+}
+.percent1 {
+	float: left;
+	align-items: left;
+	justify-content: left;
+}
+.sales {
+	justify-content: center;
+  align-items: center;
+}
 * {
   font-family: Arial, Helvetica, sans-serif;
 }

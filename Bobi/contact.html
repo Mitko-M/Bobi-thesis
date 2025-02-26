@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <header class="sticky-top">
+  <header class="sticky-top">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
@@ -56,47 +56,81 @@
         </div>
       </nav>
     </header>
-    <div id="contact-form" class="">
-        <h1>Свържете се с нас</h1>
-        <div class="form-floating mb-3">
-            <input type="name" class="form-control" id="floatingInput" placeholder="First Name + Last Name">
-            <label for="floatingInput">Имена</label>
+	
+<div id="contact-form">
+    <h1>Свържете се с нас</h1>
+    
+    <div class="form-floating mb-3">
+        <input type="name" class="form-control" id="name" placeholder="First Name + Last Name">
+        <label for="name">Имена</label>
+    </div>
+    
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="email" placeholder="name@example.com">
+        <label for="email">Имейл</label>
+    </div>
+    <p id="email-error" style="color: red; font-size: 14px; margin-top: 5px; display: none;">
+        Моля, въведете валиден имейл адрес!
+    </p>
+    
+    <div class="form-floating">
+        <textarea class="form-control" id="message" placeholder="Leave a comment here" style="height: 100px"></textarea>
+        <label for="message">Съобщение</label>
+    </div>
+    
+    <button id="send-button" disabled>
+      <div class="svg-wrapper-1">
+        <div class="svg-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="none" d="M0 0h24v24H0z"></path>
+            <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+          </svg>
         </div>
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Имейл</label>
-        </div>
-        <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-            <label for="floatingTextarea2">Съобщение</label>
-        </div>
-        <button>
-          <div class="svg-wrapper-1">
-            <div class="svg-wrapper">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="24"
-                height="24"
-              >
-                <path fill="none" d="M0 0h24v24H0z"></path>
-                <path
-                  fill="currentColor"
-                  d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
-                ></path>
-              </svg>
-            </div>
-          </div>
-          <span>Изпрати</span>
-        </button>
+      </div>
+      <span>Изпрати</span>
+    </button>
+</div>
+
+<script>
+  const emailInput = document.getElementById("email");
+  const emailError = document.getElementById("email-error");
+  const sendButton = document.getElementById("send-button");
+
+  emailInput.addEventListener("input", function() {
+      if (!emailInput.value.includes("@")) {
+          emailError.style.display = "block";
+          sendButton.disabled = true;
+      } else {
+          emailError.style.display = "none";
+          sendButton.disabled = false;
+      }
+  });
+
+  sendButton.addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Clear the form
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+      
+      // Refresh the page after a short delay
+      setTimeout(() => {
+          window.location.reload();
+      }, 1000);
+  });
+</script>
+
+
+		</div>
     </div>
     <div id="contact-info" class="mb-5">
-      <h4>Може също да ни намерите на адрес: Адрес</h4>
-      <h4>Или да се свържете с на нас на телефон: 0000 000 000</h4>
+      <h4>Може също да ни намерите на адрес: град Варна, ул.Петко Велики 14 </h4>
+      <h4>Или да се свържете с на нас на телефон: 089 927 2424</h4>
     </div>
     <script src="https://kit.fontawesome.com/4ca92add59.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+
   <footer class="site-footer">
     <div class="container">
       <div class="row">
@@ -116,7 +150,7 @@
             <li><a href="discounts.html">Промоции</a></li>
           </ul>
         </div>
-
+  </body>
         <div class="col-xs-6 col-md-3">
           <h6>Линкове</h6>
           <ul class="footer-links">

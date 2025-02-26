@@ -10,7 +10,6 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
-
 #info {
   display: flex;
   padding: 100px;
@@ -43,7 +42,8 @@
 
 .catalog-btn {
     display: flex !important;
-    justify-self: start !important;
+    justify-self: center;
+
 }
 
 .site-footer

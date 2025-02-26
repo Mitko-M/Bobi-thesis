@@ -58,6 +58,38 @@
         </div>
       </nav>
     </header>
+	<div class="sale">
+	<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let saleImage = document.querySelector(".sale img");
+
+    // Apply fade-in effect
+    saleImage.style.opacity = 0;
+    saleImage.style.transition = "opacity 2s ease-in";
+    setTimeout(() => {
+      saleImage.style.opacity = 1;
+    }, 100);
+
+    // Apply pulse animation after fade-in
+    setTimeout(() => {
+      saleImage.style.animation = "pulse 2s infinite ease-in-out";
+    }, 2000);
+
+    // Define the keyframes for pulse animation dynamically
+    let style = document.createElement("style");
+    style.innerHTML = `
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+      }
+    `;
+    document.head.appendChild(style);
+  });
+</script>
+  <center><img src="images/Sale.jpg"></center>
+  
+  </div>
   <div id="catalog-items" class="container-fluid">
     <div class="card" style="width: 18rem;">
         <img src="images/shoe3.jpg" class="card-img-top" alt="...">
