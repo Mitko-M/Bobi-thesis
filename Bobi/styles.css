@@ -412,3 +412,26 @@
     text-decoration: none;
     color: white;
   }
+
+  /* For tablets (portrait and landscape) */
+@media (max-width: 1024px) {
+
+}
+
+/* For large mobile devices */
+@media (max-width: 768px) {
+  #carousel-logo {
+    flex-direction: column;
+  }
+  #carousel img {
+    width: 100% !important;
+  }
+  .logo-car {
+    display: none;
+  }
+}
+
+/* For small mobile devices */
+@media (max-width: 480px) {
+
+}
