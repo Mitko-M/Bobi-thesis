@@ -7,6 +7,10 @@ body {
     height: 100vh;
 }
 
+body > header {
+  width: 100%;
+}
+
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
