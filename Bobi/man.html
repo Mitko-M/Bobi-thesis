@@ -57,7 +57,15 @@
         </div>
       </nav>
     </header>
-    <div id="catalog-items" class="container-fluid">
+    <div id="wrapper" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 50px;">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Начало</a></li>
+          <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Мъже</li>
+        </ol>
+      </nav>
+      <div id="catalog-items" class="container-fluid">
         <div class="card" style="width: 18rem;">
             <img src="images/shoe1.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -91,6 +99,7 @@
               </div>
             </div>
         </div>
+    </div>
     </div>
     <a class="btn btn-primary" href="catalog.html">Разгледай целият каталог</a>
     <script src="https://kit.fontawesome.com/4ca92add59.js" crossorigin="anonymous"></script>
