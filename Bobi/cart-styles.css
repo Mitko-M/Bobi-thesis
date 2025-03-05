@@ -1,8 +1,15 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body stretches fully */
+}
+
 #cart {
-    height: 100vh;
+    min-height: 100vh; /* Instead of height: 100vh */
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-grow: 1; /* Makes cart take up remaining space */
 }
 
 * {
@@ -12,11 +19,26 @@
 #products {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: 100%;
     padding: 30px;
     border-right: 5px solid orange;
+    gap: 30px;
+}
+
+.product {
+    display: flex;
+    background-color: #ffa500;
+    color: white;
+    justify-content: space-between;
+    width: 600px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 32px;
+}
+
+.product img {
+    border-radius: 16px;
 }
 
 #cost {
@@ -40,3 +62,38 @@
     border-bottom: 5px solid orange;
     padding-bottom: 10px;
 }
+
+/* For tablets (portrait and landscape) */
+@media (max-width: 1024px) {
+    
+  }
+  
+  /* For large mobile devices */
+  @media (max-width: 768px) {
+    #cart {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .product {
+        width: 300px;
+        height: 500px;
+        flex-direction: column;
+    }
+
+    .product img {
+        width: 250px;
+        height: 250px;
+    }
+
+    #cost h1:nth-child(1),
+    #cost h1:nth-child(2), 
+    #products {
+        border: none;
+    }
+  }
+  
+  /* For small mobile devices */
+  @media (max-width: 480px) {
+  
+  }

@@ -415,7 +415,9 @@
 
   /* For tablets (portrait and landscape) */
 @media (max-width: 1024px) {
-
+  .logo-car {
+    display: none;
+  }
 }
 
 /* For large mobile devices */
