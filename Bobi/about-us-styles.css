@@ -15,7 +15,13 @@ ul {
 	margin-top: 50px;
 }
 #about-us h1, p {
- 
+
+ .avtor {
+text-align: left;
+display: block; 
+margin-left: 0; 
+}
+
 }
 
 .site-footer
